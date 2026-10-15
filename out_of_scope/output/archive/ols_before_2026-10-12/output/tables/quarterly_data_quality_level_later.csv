@@ -1,0 +1,10 @@
+scale,period,pool,feature,reporting_lag_quarters,initial_coverage,mean_training_imputed_fraction,evaluation_imputed_n,evaluation_imputed_fraction
+level,later,current_quarterly,core__unemployment,1,1.0,0.0,0,0.0
+level,later,current_quarterly,core__fed_funds,0,1.0,0.0,0,0.0
+level,later,current_quarterly,core__default_spread,0,1.0,0.0,0,0.0
+level,later,current_quarterly,core__term_spread,0,1.0,0.0,0,0.0
+level,later,current_quarterly,core__commercial_paper_spread,0,1.0,0.05416666666666667,2,0.16666666666666666
+level,later,current_quarterly,core__inflation,1,1.0,0.0,0,0.0
+level,later,current_quarterly,core__ip_growth,1,1.0,0.0,0,0.0
+level,later,current_quarterly,core__ip_volatility,1,1.0,0.0,0,0.0
+level,later,current_quarterly,core__ppi_volatility,1,1.0,0.0,0,0.0

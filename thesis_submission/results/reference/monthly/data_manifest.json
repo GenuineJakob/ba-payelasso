@@ -1,0 +1,18 @@
+{
+  "refreshed": false,
+  "source_sha256": {
+    "PayoutPaperTS_04_Mar_2021_monthly.csv": "b6ea1492791ec1ef8608dda9f475256dc56aa5ed1d0855046dc3ed38c7cb64f1",
+    "fredmd_snapshot_2026-09.csv": "d6e239038afbdbf4667c2a63c13c942817bc196fedab4355cd7e0d353ecdd65d",
+    "goyal-welch-a.csv": "119bbc9acedb991d7a1f246f7c9eab996632465ab3851560cd5ed7806f51db9e",
+    "fred_macro.csv": "cf2b18e3f02f8d78554c5bf1cdb2673db503f2b405d9098743d6f6a9f76675fb",
+    "fredmd_appendix0324.zip": "b51fd612fea7d067ab564b9e7e11ab0c654ecbccad042793dfbe4c2c9df2aa77",
+    "sp500.csv": "b20182e3d094306a012f5e655a1906987742cb3dee754dfbbd91ea49fc4b4a58"
+  },
+  "artifacts": {
+    "base.csv": "e77274f4ce62e7c38137822455a1b3d3177b3072479e777515a6f7e8dbcb631e",
+    "expanded.csv": "b8db224f3bff81ad9668d5989a1b681e806639f75de126728bb9d5548f30d4dd",
+    "pools.json": "5b64add53159ae3dea178562ef856292a3d64c8da0fc1b3414df1b058eabd0dc",
+    "macro_dictionary.csv": "f34c0cabc33b7352a3c68100549e74430ec78b83fb333cb6f6b2392520b5c836"
+  },
+  "refreshed_source_sha256": {}
+}

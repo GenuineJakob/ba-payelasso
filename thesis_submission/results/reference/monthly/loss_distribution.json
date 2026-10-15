@@ -1,0 +1,11 @@
+{
+  "n": 240,
+  "zero_count": 209,
+  "positive_count": 16,
+  "negative_count": 15,
+  "mean": 9.430086012271178e-05,
+  "median": 0.0,
+  "skewness": 11.816678502610797,
+  "april_may_net_share": 0.8498679017494956,
+  "without_april_may_reduction": 0.0019011527827793584
+}

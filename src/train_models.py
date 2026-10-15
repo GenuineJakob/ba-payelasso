@@ -15,20 +15,23 @@ This script supports two forecast designs:
    - Move the window forward by one month.
 
 Models:
-- Benchmark AR-style model: uses current observed volatility.
-- OLS: uses current observed volatility and all macro predictors.
-- Lasso: uses current observed volatility and macro predictors with L1 regularization.
+- Benchmark: AR(6), matching Paye's monthly lag specification.
+- OLS: uses the AR(6) block and all macro predictors.
+- Lasso: leaves the AR(6) block and intercept unpenalized; only macro
+  predictors are subject to L1 regularization.
+
+The target remains volatility in levels. Paye models log annualized
+volatility; this script adopts his monthly lag order, not that transformation.
 """
 
 import numpy as np
 import pandas as pd
 from pathlib import Path
 
-from sklearn.linear_model import LinearRegression, LassoCV
+from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
-from sklearn.model_selection import TimeSeriesSplit
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
+
+from partially_penalized_lasso import PartiallyPenalizedLassoCV
 
 
 # =====================================================
@@ -57,10 +60,9 @@ TARGET = "target"
 
 BENCHMARK_PREDICTORS = [
     "volatility",
-]
+] + [f"vol_lag_{lag}" for lag in range(1, 6)]
 
-FULL_PREDICTORS = [
-    "volatility",
+FULL_PREDICTORS = BENCHMARK_PREDICTORS + [
     "unemployment",
     "fed_funds",
     "default_spread",
@@ -94,6 +96,11 @@ def load_dataset() -> pd.DataFrame:
 
     df = pd.read_csv(DATA_PATH, index_col=0, parse_dates=True)
     df = df.sort_index()
+
+    # Rows are forecast origins: target is Vol(t+1), so Vol(t), ..., Vol(t-5)
+    # form the six autoregressive inputs. Build lags before dropping rows.
+    for lag in range(1, 6):
+        df[f"vol_lag_{lag}"] = df["volatility"].shift(lag)
 
     required_columns = set([TARGET] + BENCHMARK_PREDICTORS + FULL_PREDICTORS)
     missing_columns = required_columns.difference(df.columns)
@@ -165,7 +172,7 @@ def evaluate_predictions(
 
 
 def fit_predict_benchmark(train: pd.DataFrame, test: pd.DataFrame) -> np.ndarray:
-    """Fit benchmark AR(1)-style model and predict test observations."""
+    """Fit the unpenalized AR(6) benchmark and predict test observations."""
     model = LinearRegression()
     model.fit(train[BENCHMARK_PREDICTORS], train[TARGET])
     return model.predict(test[BENCHMARK_PREDICTORS])
@@ -179,32 +186,18 @@ def fit_predict_ols(train: pd.DataFrame, test: pd.DataFrame) -> tuple[np.ndarray
     return predictions, model
 
 
-def make_lasso_model(n_splits: int = 5) -> Pipeline:
-    """
-    Create Lasso model pipeline.
-
-    StandardScaler is essential because the Lasso penalty depends on the
-    scale of the predictors. TimeSeriesSplit respects chronological order.
-    """
-    time_series_cv = TimeSeriesSplit(n_splits=n_splits)
-
-    return Pipeline(
-        [
-            ("scaler", StandardScaler()),
-            (
-                "lasso",
-                LassoCV(
-                    cv=time_series_cv,
-                    alphas=LASSO_ALPHAS,
-                    max_iter=50000,
-                    random_state=42,
-                ),
-            ),
-        ]
+def make_lasso_model(n_splits: int = 5) -> PartiallyPenalizedLassoCV:
+    """Tune only the macro penalty, with fold-local projections and scaling."""
+    return PartiallyPenalizedLassoCV(
+        controls=BENCHMARK_PREDICTORS,
+        alphas=LASSO_ALPHAS,
+        n_splits=n_splits,
     )
 
 
-def fit_predict_lasso(train: pd.DataFrame, test: pd.DataFrame) -> tuple[np.ndarray, Pipeline]:
+def fit_predict_lasso(
+    train: pd.DataFrame, test: pd.DataFrame
+) -> tuple[np.ndarray, PartiallyPenalizedLassoCV]:
     """Fit Lasso model and predict test observations."""
     model = make_lasso_model()
     model.fit(train[FULL_PREDICTORS], train[TARGET])
@@ -212,13 +205,24 @@ def fit_predict_lasso(train: pd.DataFrame, test: pd.DataFrame) -> tuple[np.ndarr
     return predictions, model
 
 
-def get_lasso_coefficients(lasso_model: Pipeline) -> pd.Series:
-    """Extract Lasso coefficients as a labelled Series."""
-    return pd.Series(
-        lasso_model.named_steps["lasso"].coef_,
-        index=FULL_PREDICTORS,
-        name="coefficient",
+def get_lasso_coefficients(lasso_model: PartiallyPenalizedLassoCV) -> pd.Series:
+    """Export the intercept and all coefficients in original feature units."""
+    return pd.concat(
+        [
+            pd.Series({"intercept": lasso_model.intercept_}, name="coefficient"),
+            pd.Series(
+                lasso_model.coef_,
+                index=lasso_model.feature_names_in_,
+                name="coefficient",
+            ),
+        ]
     )
+
+
+def selected_lasso_coefficients(coefficients: pd.Series) -> pd.Series:
+    """Selection refers only to penalized predictors, never the AR block."""
+    additional = coefficients.drop(["intercept"] + BENCHMARK_PREDICTORS)
+    return additional[additional.abs() > 1e-12]
 
 
 def get_ols_coefficients(ols_model: LinearRegression) -> pd.Series:
@@ -326,7 +330,7 @@ def rolling_window_forecast(
 
         lasso_coefficients = get_lasso_coefficients(lasso_model)
         ols_coefficients = get_ols_coefficients(ols_model)
-        selected_variables = lasso_coefficients[lasso_coefficients != 0].index.tolist()
+        selected_variables = selected_lasso_coefficients(lasso_coefficients).index.tolist()
 
         prediction_rows.append(
             {
@@ -335,7 +339,7 @@ def rolling_window_forecast(
                 "benchmark": pred_benchmark,
                 "ols": pred_ols,
                 "lasso": pred_lasso,
-                "lasso_alpha": lasso_model.named_steps["lasso"].alpha_,
+                "lasso_alpha": lasso_model.alpha_,
                 "selected_variables": ",".join(selected_variables),
             }
         )
@@ -386,7 +390,7 @@ def main() -> None:
     print(fixed_results)
 
     print("\nSelected Lasso variables in fixed split:")
-    selected_fixed = fixed_lasso_coefficients[fixed_lasso_coefficients != 0]
+    selected_fixed = selected_lasso_coefficients(fixed_lasso_coefficients)
     print(selected_fixed if not selected_fixed.empty else "No variables selected.")
 
     fixed_predictions.to_csv(RESULTS_DIR / "fixed_predictions.csv")

@@ -1,0 +1,16 @@
+{
+  "src/build_project_report.py": "52bc963a251679d7735bc70b1292c90db17ab933a9eac77798b4ea0d751144e9",
+  "README_fredmd.md": "38667503532231b93fb95d2ab28fd96a80a855326b9322a24076759b2e7a0564",
+  "README_volatility_analysis.md": "7160f2a5c3364ece834ea23dc570d6e030cb28b66211dcb35219ff6ceecc4dda",
+  "output/reports/.DS_Store": "c74cef1275d3f5e14a39987e1a465b8717780aca271cc743a2957f4179df1b7c",
+  "output/reports/project_overview.md": "47126cd022f7093d5c995e2ed238058a6da404d6ef9e66932856425db82cb84d",
+  "output/reports/report_manifest.json": "2248bf99fba3b21aed0044fff0ffec823d20c8ed7556323882a062a843faeb92",
+  "output/reports/results.html": "0101589575930fefc62ed707e92569f09c39fe11c37f7539829b757767372c6e",
+  "output/reports/results_report.md": "7adc1f1181039f12d7a3013f5a03ef15ef4431a64467d7231e4181b05386f1f0",
+  "output/reports/assets/quarterly_log.svg": "93ee3a21cf34e7866961b7a80c79520923c469f8baa8078d5286fc3857faeaf1",
+  "output/reports/assets/fredmd_forecast.png": "95c7be9eb31a18ec1c1080c684a411751a8aece98b61e9bd66b5579ee2715a4c",
+  "output/reports/assets/fredmd_forecast.svg": "b9a56e692e27e44e5b95c101203738b88f88c01d170e8040741cc62ad7f57696",
+  "output/reports/assets/quarterly_log.png": "e0d6d975017a46293be479cca12f44c1acba81c9ebb297739068347a66f4eed9",
+  "output/reports/assets/contemporaneous_log.png": "47d971ad33c0a70fa55aeb3c549f3237fa1ee46ada18c4bb6c204ab5b21c7dc5",
+  "output/reports/assets/contemporaneous_log.svg": "6f3bc275b6b3fb936dab142cf2cf896cf42a71721598f45786eb1e85cf5a4a85"
+}

@@ -1,0 +1,36 @@
+{
+  "completed_utc": "2026-10-13T19:50:22.739505+00:00",
+  "settings": {
+    "project": "/Users/jakobmueller/Library/CloudStorage/OneDrive-Universita\u0308tHeidelberg/Uni/BA/Code",
+    "output": "/Users/jakobmueller/Documents/BA/current_scope_validation",
+    "stage": "data",
+    "experiment": "all",
+    "limit": null,
+    "download": false,
+    "resamples": 20000
+  },
+  "source_sha256": {
+    "PayoutPaperTS_04_Mar_2021_monthly.csv": "b6ea1492791ec1ef8608dda9f475256dc56aa5ed1d0855046dc3ed38c7cb64f1",
+    "fredmd_snapshot_2026-09.csv": "d6e239038afbdbf4667c2a63c13c942817bc196fedab4355cd7e0d353ecdd65d",
+    "goyal-welch-a.csv": "119bbc9acedb991d7a1f246f7c9eab996632465ab3851560cd5ed7806f51db9e",
+    "fred_macro.csv": "cf2b18e3f02f8d78554c5bf1cdb2673db503f2b405d9098743d6f6a9f76675fb",
+    "fredmd_appendix0324.zip": "b51fd612fea7d067ab564b9e7e11ab0c654ecbccad042793dfbe4c2c9df2aa77",
+    "sp500.csv": "b20182e3d094306a012f5e655a1906987742cb3dee754dfbbd91ea49fc4b4a58"
+  },
+  "script_sha256": {
+    "run.py": "fd6fd3810822aebacf3e9c4de03e0854dafe3c98ec775bb4758d7cdf40457a83",
+    "forecast.py": "7575fd3ae1f7e6f33853c45c60b7e785729f9259c22bac0176b4dbb58b8a2419",
+    "models.py": "c046ed4984ff4f293bab3ac8da6015e4e1a4262f5c3ea1898fffd4d65a61fab8",
+    "settings.py": "486a9c53e71a7c50d8dc2b9810e43e687187225b9ff06ef974b9826b780630c8",
+    "evaluate.py": "f48ba105a54cf9d4ff1d7a31e120695120d13531a73fa8739ca9125ed476a977",
+    "data.py": "e3b49362bf70e6561898485e294b38a2f10672cce73b71a9599779bfa9445abb"
+  },
+  "software": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "threadpoolctl": "3.7.0"
+  }
+}

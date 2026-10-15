@@ -1,0 +1,10 @@
+feature,source,source_code,description,group,transformation,reporting_lag_quarters,initial_training_start,initial_training_end,initial_training_n,initial_finite_n,initial_coverage,eligible,exclusion_reason
+core__unemployment,current_quarterly,unemployment,Unemployment rate,2,mean of three finite monthly observations,1,1980-12-31,2000-09-30,80,80,1.0,True,
+core__fed_funds,current_quarterly,fed_funds,Federal funds rate,6,mean of three finite monthly observations,0,1980-12-31,2000-09-30,80,80,1.0,True,
+core__default_spread,current_quarterly,default_spread,BAA minus AAA yield,6,mean of three finite monthly observations,0,1980-12-31,2000-09-30,80,80,1.0,True,
+core__term_spread,current_quarterly,term_spread,10-year minus 3-month Treasury yield,6,mean of three finite monthly observations,0,1980-12-31,2000-09-30,80,80,1.0,True,
+core__commercial_paper_spread,current_quarterly,commercial_paper_spread,3-month commercial paper minus Treasury yield,6,mean of three finite monthly observations,0,1980-12-31,2000-09-30,80,80,1.0,True,
+core__inflation,current_quarterly,inflation,Consumer-price inflation,7,four-quarter log change of quarterly mean index,1,1980-12-31,2000-09-30,80,80,1.0,True,
+core__ip_growth,current_quarterly,ip_growth,Industrial-production growth,1,four-quarter log change of quarterly mean index,1,1980-12-31,2000-09-30,80,80,1.0,True,
+core__ip_volatility,current_quarterly,ip_volatility,Industrial-production growth volatility,1,four-quarter sample SD of four-quarter log index changes,1,1980-12-31,2000-09-30,80,80,1.0,True,
+core__ppi_volatility,current_quarterly,ppi_volatility,Producer-price inflation volatility,7,four-quarter sample SD of four-quarter log index changes,1,1980-12-31,2000-09-30,80,80,1.0,True,

@@ -1,0 +1,16 @@
+{
+  "vintage": "2026-09",
+  "retrieved_at_utc": "2026-10-10T18:10:54.905796+00:00",
+  "artifacts": {
+    "fredmd_snapshot_2026-09.csv": {
+      "url": "https://www.stlouisfed.org/-/media/project/frbstl/stlouisfed/research/fred-md/monthly/2026-09-md.csv",
+      "sha256": "d6e239038afbdbf4667c2a63c13c942817bc196fedab4355cd7e0d353ecdd65d",
+      "bytes": 669656
+    },
+    "fredmd_appendix0324.zip": {
+      "url": "https://www.stlouisfed.org/-/media/project/frbstl/stlouisfed/research/fred-md/fred-md_appendix0324.zip",
+      "sha256": "b51fd612fea7d067ab564b9e7e11ab0c654ecbccad042793dfbe4c2c9df2aa77",
+      "bytes": 247991
+    }
+  }
+}

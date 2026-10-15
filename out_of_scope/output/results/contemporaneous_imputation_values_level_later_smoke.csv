@@ -1,0 +1,9 @@
+date,scale,period,pool,feature,training_missing_n,training_median,evaluation_imputed
+2021-01-31,level,later,fredmd_no_iv,fredmd__CP3Mx,2,0.0,False
+2021-01-31,level,later,fredmd_no_iv,fredmd__COMPAPFFx,1,0.09,False
+2021-01-31,level,later,fredmd_full,fredmd__CP3Mx,2,0.0,False
+2021-01-31,level,later,fredmd_full,fredmd__COMPAPFFx,1,0.09,False
+2021-02-28,level,later,fredmd_no_iv,fredmd__CP3Mx,2,0.0,False
+2021-02-28,level,later,fredmd_no_iv,fredmd__COMPAPFFx,1,0.09,False
+2021-02-28,level,later,fredmd_full,fredmd__CP3Mx,2,0.0,False
+2021-02-28,level,later,fredmd_full,fredmd__COMPAPFFx,1,0.09,False

@@ -1,0 +1,7 @@
+experiment,window,scale,period,pool,model,date,target_date,feature,training_missing_n,training_median,evaluation_imputed
+contemporaneous,240,level,later,no_volatility_proxy,lasso,2021-01-31,2021-01-31,fredmd__CP3Mx,2,0.0,False
+contemporaneous,240,level,later,no_volatility_proxy,lasso,2021-01-31,2021-01-31,fredmd__COMPAPFFx,1,0.09,False
+contemporaneous,240,level,later,extended_fredmd,lasso,2021-01-31,2021-01-31,fredmd__CP3Mx,2,0.0,False
+contemporaneous,240,level,later,extended_fredmd,lasso,2021-01-31,2021-01-31,fredmd__COMPAPFFx,1,0.09,False
+contemporaneous,240,level,later,options_only,lasso,2021-01-31,2021-01-31,fredmd__CP3Mx,2,0.0,False
+contemporaneous,240,level,later,options_only,lasso,2021-01-31,2021-01-31,fredmd__COMPAPFFx,1,0.09,False

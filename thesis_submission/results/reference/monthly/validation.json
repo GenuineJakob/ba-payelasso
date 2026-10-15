@@ -1,0 +1,250 @@
+{
+  "forecast_rows": 9213,
+  "reference_comparisons": 45,
+  "maximum_prediction_difference": 1.7000012508816553e-12,
+  "prediction_absolute_tolerance": 2e-09,
+  "all_reference_forecasts_agree": true,
+  "inference_matches_thesis_review": true,
+  "checks_passed": 9,
+  "tidyfinance_version_tested": "0.5.3",
+  "tidyfinance_macro_transform_comparison_passed": true,
+  "comparisons": [
+    {
+      "comparison": "original_fixed_ar",
+      "n": 240,
+      "maximum_prediction_difference": 2.220446049250313e-16
+    },
+    {
+      "comparison": "original_fixed_ols",
+      "n": 240,
+      "maximum_prediction_difference": 6.106226635438361e-16
+    },
+    {
+      "comparison": "original_fixed_lasso",
+      "n": 240,
+      "maximum_prediction_difference": 2.220446049250313e-16
+    },
+    {
+      "comparison": "original_rolling_ar",
+      "n": 229,
+      "maximum_prediction_difference": 4.440892098500626e-16
+    },
+    {
+      "comparison": "original_rolling_ols",
+      "n": 229,
+      "maximum_prediction_difference": 1.304512053934559e-15
+    },
+    {
+      "comparison": "original_rolling_lasso",
+      "n": 229,
+      "maximum_prediction_difference": 4.440892098500626e-16
+    },
+    {
+      "comparison": "paye_cp_ar",
+      "n": 228,
+      "maximum_prediction_difference": 4.440892098500626e-16
+    },
+    {
+      "comparison": "paye_cp_ols",
+      "n": 228,
+      "maximum_prediction_difference": 5.551115123125783e-16
+    },
+    {
+      "comparison": "paye_cp_lasso",
+      "n": 228,
+      "maximum_prediction_difference": 6.661338147750939e-16
+    },
+    {
+      "comparison": "paye_dfr_ar",
+      "n": 228,
+      "maximum_prediction_difference": 4.440892098500626e-16
+    },
+    {
+      "comparison": "paye_dfr_ols",
+      "n": 228,
+      "maximum_prediction_difference": 9.992007221626409e-16
+    },
+    {
+      "comparison": "paye_dfr_lasso",
+      "n": 228,
+      "maximum_prediction_difference": 6.661338147750939e-16
+    },
+    {
+      "comparison": "paye_dfy_ar",
+      "n": 228,
+      "maximum_prediction_difference": 4.440892098500626e-16
+    },
+    {
+      "comparison": "paye_dfy_ols",
+      "n": 228,
+      "maximum_prediction_difference": 3.3306690738754696e-16
+    },
+    {
+      "comparison": "paye_dfy_lasso",
+      "n": 228,
+      "maximum_prediction_difference": 5.551115123125783e-16
+    },
+    {
+      "comparison": "paye_ip_ar",
+      "n": 228,
+      "maximum_prediction_difference": 4.440892098500626e-16
+    },
+    {
+      "comparison": "paye_ip_ols",
+      "n": 228,
+      "maximum_prediction_difference": 5.551115123125783e-16
+    },
+    {
+      "comparison": "paye_ip_lasso",
+      "n": 228,
+      "maximum_prediction_difference": 6.661338147750939e-16
+    },
+    {
+      "comparison": "paye_ipvol_ar",
+      "n": 228,
+      "maximum_prediction_difference": 4.440892098500626e-16
+    },
+    {
+      "comparison": "paye_ipvol_ols",
+      "n": 228,
+      "maximum_prediction_difference": 3.885780586188048e-16
+    },
+    {
+      "comparison": "paye_ipvol_lasso",
+      "n": 228,
+      "maximum_prediction_difference": 6.661338147750939e-16
+    },
+    {
+      "comparison": "paye_npy_ar",
+      "n": 228,
+      "maximum_prediction_difference": 4.440892098500626e-16
+    },
+    {
+      "comparison": "paye_npy_ols",
+      "n": 228,
+      "maximum_prediction_difference": 3.3306690738754696e-16
+    },
+    {
+      "comparison": "paye_npy_lasso",
+      "n": 228,
+      "maximum_prediction_difference": 6.661338147750939e-16
+    },
+    {
+      "comparison": "paye_ppivol_ar",
+      "n": 228,
+      "maximum_prediction_difference": 4.440892098500626e-16
+    },
+    {
+      "comparison": "paye_ppivol_ols",
+      "n": 228,
+      "maximum_prediction_difference": 9.992007221626409e-16
+    },
+    {
+      "comparison": "paye_ppivol_lasso",
+      "n": 228,
+      "maximum_prediction_difference": 6.661338147750939e-16
+    },
+    {
+      "comparison": "paye_tms_ar",
+      "n": 228,
+      "maximum_prediction_difference": 4.440892098500626e-16
+    },
+    {
+      "comparison": "paye_tms_ols",
+      "n": 228,
+      "maximum_prediction_difference": 5.551115123125783e-16
+    },
+    {
+      "comparison": "paye_tms_lasso",
+      "n": 228,
+      "maximum_prediction_difference": 6.661338147750939e-16
+    },
+    {
+      "comparison": "paye_joint_ar",
+      "n": 228,
+      "maximum_prediction_difference": 4.440892098500626e-16
+    },
+    {
+      "comparison": "paye_joint_ols",
+      "n": 228,
+      "maximum_prediction_difference": 1.4432899320127035e-15
+    },
+    {
+      "comparison": "paye_joint_lasso",
+      "n": 228,
+      "maximum_prediction_difference": 6.661338147750939e-16
+    },
+    {
+      "comparison": "expanded_main_baseline_ar",
+      "n": 240,
+      "maximum_prediction_difference": 6.661338147750939e-16
+    },
+    {
+      "comparison": "expanded_main_baseline_ols",
+      "n": 240,
+      "maximum_prediction_difference": 1.1102230246251565e-15
+    },
+    {
+      "comparison": "expanded_main_baseline_lasso",
+      "n": 240,
+      "maximum_prediction_difference": 6.661338147750939e-16
+    },
+    {
+      "comparison": "expanded_main_macro_ar",
+      "n": 240,
+      "maximum_prediction_difference": 6.661338147750939e-16
+    },
+    {
+      "comparison": "expanded_main_macro_ols",
+      "n": 240,
+      "maximum_prediction_difference": 1.7000012508816553e-12
+    },
+    {
+      "comparison": "expanded_main_macro_lasso",
+      "n": 240,
+      "maximum_prediction_difference": 1.7208456881689926e-15
+    },
+    {
+      "comparison": "expanded_later_baseline_ar",
+      "n": 35,
+      "maximum_prediction_difference": 1.1102230246251565e-16
+    },
+    {
+      "comparison": "expanded_later_baseline_ols",
+      "n": 35,
+      "maximum_prediction_difference": 1.1102230246251565e-15
+    },
+    {
+      "comparison": "expanded_later_baseline_lasso",
+      "n": 35,
+      "maximum_prediction_difference": 1.942890293094024e-16
+    },
+    {
+      "comparison": "expanded_later_macro_ar",
+      "n": 35,
+      "maximum_prediction_difference": 1.1102230246251565e-16
+    },
+    {
+      "comparison": "expanded_later_macro_ols",
+      "n": 35,
+      "maximum_prediction_difference": 1.4566126083082054e-13
+    },
+    {
+      "comparison": "expanded_later_macro_lasso",
+      "n": 35,
+      "maximum_prediction_difference": 1.1102230246251565e-16
+    }
+  ],
+  "script_sha256": {
+    "run.py": "73d6b93f5391599ba5c10354dd75124f120afe6d3e5a84bc0d8ec867262a5ec1",
+    "forecast.py": "7575fd3ae1f7e6f33853c45c60b7e785729f9259c22bac0176b4dbb58b8a2419",
+    "models.py": "c046ed4984ff4f293bab3ac8da6015e4e1a4262f5c3ea1898fffd4d65a61fab8",
+    "settings.py": "486a9c53e71a7c50d8dc2b9810e43e687187225b9ff06ef974b9826b780630c8",
+    "evaluate.py": "fcb0d2c764c6edb6f30820d873ea73539b4644cd5d8dfa5fce61bba7a5410516",
+    "data.py": "c27e26aa89b9113d24f0a16356b64c9a02e7bc8677fc69e81b3f974d57a0dd19"
+  },
+  "script_lines": 698,
+  "in_scope_predecessor_lines": 2717,
+  "code_line_reduction_percent": 74.30990062569009,
+  "installed_folder": "/Users/jakobmueller/Library/CloudStorage/OneDrive-Universita\u0308tHeidelberg/Uni/BA/Code/current_scope"
+}

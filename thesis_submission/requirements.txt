@@ -1,0 +1,21 @@
+# Scientific package versions recorded in the thesis run.
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+threadpoolctl==3.7.0
+# Supporting packages pinned for the submission environment.
+cloudpickle==3.1.2
+contourpy==1.4.0
+cycler==0.12.1
+fonttools==4.67.0
+joblib==1.6.0
+kiwisolver==1.5.1
+narwhals==2.27.1
+packaging==26.3
+pillow==12.3.0
+pyparsing==3.3.3
+python-dateutil==2.9.0.post0
+six==1.17.0
+tzdata==2025.2; sys_platform == "win32"

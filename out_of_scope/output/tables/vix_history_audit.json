@@ -1,0 +1,23 @@
+{
+  "early_correlation": 0.9917096410963105,
+  "early_n": 60,
+  "early_period": "1981-01 through 1985-12",
+  "evaluation_contains_pre1986_targets": false,
+  "source_notes": {
+    "fredmd_changes": "https://files.stlouisfed.org/files/htdocs/econ/mccracken/fred-databases/fredmdchanges.pdf",
+    "updated_changes": "https://www.stlouisfed.org/-/media/project/frbstl/stlouisfed/research/fred-md/fredmdchanges0324.pdf?hash=4CC75807566F1F6F1BCC7FB312484BA0&sc_lang=en",
+    "bloom_author_draft": "https://users.nber.org/~confer/2006/si2006/efg/bloom.pdf",
+    "cboe": "https://www.cboe.com/tradable_products/vix/vix_historical_data/"
+  },
+  "interpretation": "Pre-1986 FRED-MD extension uses normalized realized-return volatility; later history contains options-based VXO/VIX. The change log does not specify every observation-level replacement boundary. Do not call the entire cached history observed implied volatility.",
+  "cached_fredmd_first_observation": "1962-07-31",
+  "options_source": {
+    "url": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+    "file": "cboe_vix_history.csv",
+    "sha256": "965f14ae8d58079536b5491219b647e6385592be2c466e6ac849f6ace0bbe1f7",
+    "retrieved_at_utc": "2026-10-13T13:48:46.924692+00:00",
+    "first_date": "01/02/1990",
+    "last_date": "10/12/2026",
+    "interpretation": "Options-based VIX; early history back-calculated under modern methodology, not a historical real-time vintage. No realized-volatility extension."
+  }
+}

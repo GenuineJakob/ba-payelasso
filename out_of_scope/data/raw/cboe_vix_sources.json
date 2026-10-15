@@ -1,0 +1,9 @@
+{
+  "url": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+  "file": "cboe_vix_history.csv",
+  "sha256": "965f14ae8d58079536b5491219b647e6385592be2c466e6ac849f6ace0bbe1f7",
+  "retrieved_at_utc": "2026-10-13T13:48:46.924692+00:00",
+  "first_date": "01/02/1990",
+  "last_date": "10/12/2026",
+  "interpretation": "Options-based VIX; early history back-calculated under modern methodology, not a historical real-time vintage. No realized-volatility extension."
+}

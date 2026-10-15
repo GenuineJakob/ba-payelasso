@@ -1,0 +1,13 @@
+date,scale,period,pool,feature,training_missing_n,training_median,evaluation_imputed
+2020-12-31,log,later,current_quarterly,core__commercial_paper_spread,4,0.11833333333333329,False
+2021-03-31,log,later,current_quarterly,core__commercial_paper_spread,4,0.11166666666666665,False
+2021-06-30,log,later,current_quarterly,core__commercial_paper_spread,4,0.11,False
+2021-09-30,log,later,current_quarterly,core__commercial_paper_spread,4,0.10999999999999996,False
+2021-12-31,log,later,current_quarterly,core__commercial_paper_spread,4,0.10999999999999996,False
+2022-03-31,log,later,current_quarterly,core__commercial_paper_spread,4,0.10999999999999996,False
+2022-06-30,log,later,current_quarterly,core__commercial_paper_spread,4,0.10999999999999996,False
+2022-09-30,log,later,current_quarterly,core__commercial_paper_spread,4,0.10999999999999996,True
+2022-12-31,log,later,current_quarterly,core__commercial_paper_spread,5,0.11,False
+2023-03-31,log,later,current_quarterly,core__commercial_paper_spread,5,0.11,False
+2023-06-30,log,later,current_quarterly,core__commercial_paper_spread,5,0.11,False
+2023-09-30,log,later,current_quarterly,core__commercial_paper_spread,5,0.11,True

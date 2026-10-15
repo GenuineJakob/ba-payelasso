@@ -1,0 +1,3 @@
+date,scale,period,pool,feature,training_missing_n,training_median,evaluation_imputed
+2020-12-31,log,later,current_quarterly,core__commercial_paper_spread,4,0.11833333333333329,False
+2021-03-31,log,later,current_quarterly,core__commercial_paper_spread,4,0.11166666666666665,False

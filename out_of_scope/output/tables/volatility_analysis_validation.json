@@ -1,0 +1,85 @@
+{
+  "independent_checks": [
+    {
+      "kind": "contemporaneous",
+      "label": "level_later",
+      "model_rows": 735,
+      "ols_rows": 455,
+      "max_prediction_reconstruction_error": 6.217248937900877e-15,
+      "inherited_models_unchanged": true,
+      "OLS_full_numerical_rank": true
+    },
+    {
+      "kind": "contemporaneous",
+      "label": "level_main",
+      "model_rows": 5040,
+      "ols_rows": 3120,
+      "max_prediction_reconstruction_error": 2.4868995751603507e-14,
+      "inherited_models_unchanged": true,
+      "OLS_full_numerical_rank": true
+    },
+    {
+      "kind": "contemporaneous",
+      "label": "log_later",
+      "model_rows": 735,
+      "ols_rows": 455,
+      "max_prediction_reconstruction_error": 0.0,
+      "inherited_models_unchanged": true,
+      "OLS_full_numerical_rank": true
+    },
+    {
+      "kind": "contemporaneous",
+      "label": "log_main",
+      "model_rows": 5040,
+      "ols_rows": 3120,
+      "max_prediction_reconstruction_error": 0.0,
+      "inherited_models_unchanged": true,
+      "OLS_full_numerical_rank": true
+    },
+    {
+      "kind": "quarterly",
+      "label": "level_later",
+      "model_rows": 144,
+      "ols_rows": 120,
+      "max_prediction_reconstruction_error": 5.551115123125783e-17,
+      "inherited_models_unchanged": true,
+      "OLS_full_numerical_rank": true
+    },
+    {
+      "kind": "quarterly",
+      "label": "level_main",
+      "model_rows": 960,
+      "ols_rows": 800,
+      "max_prediction_reconstruction_error": 5.551115123125783e-17,
+      "inherited_models_unchanged": true,
+      "OLS_full_numerical_rank": true
+    },
+    {
+      "kind": "quarterly",
+      "label": "log_later",
+      "model_rows": 144,
+      "ols_rows": 120,
+      "max_prediction_reconstruction_error": 0.0,
+      "inherited_models_unchanged": true,
+      "OLS_full_numerical_rank": true
+    },
+    {
+      "kind": "quarterly",
+      "label": "log_main",
+      "model_rows": 960,
+      "ols_rows": 800,
+      "max_prediction_reconstruction_error": 0.0,
+      "inherited_models_unchanged": true,
+      "OLS_full_numerical_rank": true
+    }
+  ],
+  "unchanged_original_files": 124,
+  "tests_passed": 50,
+  "total_reconstructed_predictions": 13758,
+  "OLS_correction": {
+    "validation_file": "ols_correction_validation.json",
+    "all_prediction_rows_verified": 17058,
+    "archive": "output/archive/ols_before_2026-10-12",
+    "preservation_scope": "124-file count refers to initial implementation; OLS outputs were subsequently corrected and archived."
+  }
+}

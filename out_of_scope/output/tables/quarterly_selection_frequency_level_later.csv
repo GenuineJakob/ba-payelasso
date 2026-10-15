@@ -1,0 +1,10 @@
+scale,period,pool,feature,description,n_evaluations,selected_n,selected_share
+level,later,current_quarterly,core__unemployment,Unemployment rate,12,0,0.0
+level,later,current_quarterly,core__fed_funds,Federal funds rate,12,0,0.0
+level,later,current_quarterly,core__default_spread,BAA minus AAA yield,12,0,0.0
+level,later,current_quarterly,core__term_spread,10-year minus 3-month Treasury yield,12,0,0.0
+level,later,current_quarterly,core__commercial_paper_spread,3-month commercial paper minus Treasury yield,12,7,0.5833333333333334
+level,later,current_quarterly,core__inflation,Consumer-price inflation,12,3,0.25
+level,later,current_quarterly,core__ip_growth,Industrial-production growth,12,0,0.0
+level,later,current_quarterly,core__ip_volatility,Industrial-production growth volatility,12,0,0.0
+level,later,current_quarterly,core__ppi_volatility,Producer-price inflation volatility,12,0,0.0

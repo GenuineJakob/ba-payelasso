@@ -1,0 +1,3 @@
+experiment,benchmark_RMSE,benchmark_MSE,best_model,best_block,best_RMSE,best_OOS_R2,best_lasso_block,best_lasso_RMSE,best_lasso_OOS_R2,best_ols_block,best_ols_RMSE,best_ols_OOS_R2,n_forecasts,forecast_start,forecast_end
+modern_extension,0.0719264940275934,0.0051734205431014,lasso,credit,0.0718795504335161,0.0013048953822339,credit,0.0718795504335161,0.0013048953822339,return_payout,0.0722723854389232,-0.0096410399106945,228,2001-01-31,2019-12-31
+paye_replication,0.0669235510907265,0.004478761690593,lasso,all_available,0.0667829785093528,0.0041965778290626,all_available,0.0667829785093528,0.0041965778290626,return_payout,0.0673031808418422,-0.0113773548040418,216,1993-01-31,2010-12-31
